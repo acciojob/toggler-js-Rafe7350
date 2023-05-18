@@ -9,7 +9,13 @@ const checkboxes = document.querySelectorAll('.toggle input[type="checkbox"]');
         });
 
         if (checkedCount > 2) {
-          checkbox.checked = false;
+          checkboxes.forEach(cb => {
+            if (!cb.checked) cb.disabled = true;
+          });
+        } else {
+          checkboxes.forEach(cb => {
+            cb.disabled = false;
+          });
         }
       });
     });
