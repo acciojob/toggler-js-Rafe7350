@@ -1,1 +1,24 @@
 /*  your css code here. If applicable */
+.toggle-container {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+.toggle {
+  display: flex;
+  align-items: center;
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+.toggle input[type="checkbox"] {
+  display: none;
+}
+
+.toggle span {
+  margin-left: 5px;
+}
+
+.toggle input[type="checkbox"]:checked + span {
+  color: #FF0000;
+}
